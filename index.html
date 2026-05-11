@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soumyadwip Das - Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .neo-shadow {
+            box-shadow:
+                20px 20px 60px #d1d9e6,
+                -20px -20px 60px #ffffff;
+        }
+
+        .neo-shadow-sm {
+            box-shadow:
+                8px 8px 16px #d1d9e6,
+                -8px -8px 16px #ffffff;
+        }
+
+        .neo-inset {
+            box-shadow:
+                inset 8px 8px 16px #d1d9e6,
+                inset -8px -8px 16px #ffffff;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gradient-purple {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .gradient-pink {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .gradient-blue {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .gradient-green {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+
+        .gradient-teal {
+            background: linear-gradient(135deg, #1db89a 0%, #0a5e47 100%);
+        }
+
+        .gradient-coral {
+            background: linear-gradient(135deg, #e0714a 0%, #b84520 100%);
+        }
+
+        .gradient-orange {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+
+        .gradient-cyan {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+        }
+
+        .floating-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .pulse-glow {
+            animation: pulse-glow 2s infinite;
+        }
+
+        @keyframes pulse-glow {
+            0% {
+                box-shadow: 0 0 20px rgba(102, 126, 234, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 0 40px rgba(102, 126, 234, 0.8);
+            }
+
+            100% {
+                box-shadow: 0 0 20px rgba(102, 126, 234, 0.4);
+            }
+        }
+
+        .hover-lift {
+            transition: all 0.3s ease;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-10px);
+        }
+
+        .skill-bar {
+            height: 6px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            border-radius: 3px;
+            position: relative;
+        }
+
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .section-bg {
+            background: #f8fafc;
+        }
+
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px) scale(1.02);
+        }
+
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-image {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 8px;
+            border-radius: 50%;
+        }
+
+        /* Fixed timeline for mobile */
+        @media (max-width: 640px) {
+            .edu-connector {
+                left: 1.5rem !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 scroll-smooth overflow-x-hidden">
+    <nav class="fixed top-0 w-full glass-effect z-50 transition-all duration-300" data-aos="fade-down">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-xl sm:text-2xl font-black gradient-text">Soumyadwip-Das</div>
+                <div class="hidden md:flex space-x-6 lg:space-x-8">
+                    <a href="#home"
+                        class="font-semibold text-gray-700 hover:text-purple-600 transition-colors relative group">
+                        Home
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-600 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="#about"
+                        class="font-semibold text-gray-700 hover:text-purple-600 transition-colors relative group">
+                        About
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-600 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="#education"
+                        class="font-semibold text-gray-700 hover:text-purple-600 transition-colors relative group">
+                        Education
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-600 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="#skills"
+                        class="font-semibold text-gray-700 hover:text-purple-600 transition-colors relative group">
+                        Skills
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-600 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="#projects"
+                        class="font-semibold text-gray-700 hover:text-purple-600 transition-colors relative group">
+                        Projects
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-600 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="#contact"
+                        class="font-semibold text-gray-700 hover:text-purple-600 transition-colors relative group">
+                        Contact
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-600 transition-all group-hover:w-full"></span>
+                    </a>
+                </div>
+                <button id="mobile-menu" class="md:hidden text-2xl text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <div id="mobile-nav" class="hidden md:hidden mt-4 space-y-3 pb-4">
+                <a href="#home"
+                    class="block py-2 font-semibold text-gray-700 hover:text-purple-600 transition-colors">Home</a>
+                <a href="#about"
+                    class="block py-2 font-semibold text-gray-700 hover:text-purple-600 transition-colors">About</a>
+                <a href="#education"
+                    class="block py-2 font-semibold text-gray-700 hover:text-purple-600 transition-colors">Education</a>
+                <a href="#skills"
+                    class="block py-2 font-semibold text-gray-700 hover:text-purple-600 transition-colors">Skills</a>
+                <a href="#projects"
+                    class="block py-2 font-semibold text-gray-700 hover:text-purple-600 transition-colors">Projects</a>
+                <a href="#contact"
+                    class="block py-2 font-semibold text-gray-700 hover:text-purple-600 transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex items-center justify-center hero-bg pt-20 relative overflow-hidden">
+        <div class="absolute inset-0">
+            <div
+                class="absolute top-20 left-20 w-72 h-72 gradient-purple rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse">
+            </div>
+            <div
+                class="absolute top-40 right-20 w-72 h-72 gradient-pink rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000">
+            </div>
+            <div
+                class="absolute -bottom-8 left-40 w-72 h-72 gradient-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000">
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div data-aos="fade-right" data-aos-duration="1000" class="text-center lg:text-left">
+                    <div class="mb-6">
+                        <span
+                            class="inline-block px-4 py-2 bg-white rounded-full text-sm font-semibold text-purple-600 neo-shadow-sm mb-4">
+                            👋 Hello, I'm
+                        </span>
+                    </div>
+                    <h1
+                        class="text-4xl sm:text-5xl lg:text-7xl font-black mb-6 text-gray-800 leading-tight text-shadow">
+                        Soumyadwip
+                        <span class="gradient-text block">Das</span>
+                    </h1>
+                    <p class="text-lg lg:text-2xl text-gray-600 mb-8 font-medium leading-relaxed">
+                        Electronics & Computer Science Engineer with a strong foundation in both hardware and software,
+                        passionate about integrating electronics with modern technologies, and a dedicated tech
+                        enthusiast with a keen interest in continuous learning and innovation.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 mb-8 justify-center lg:justify-start">
+                        <button
+                            class="group gradient-purple text-white px-6 sm:px-8 py-4 rounded-2xl font-bold text-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 pulse-glow">
+                            <a href="#contact" class="flex items-center justify-center">
+                                <i class="fas fa-paper-plane mr-3 group-hover:translate-x-1 transition-transform"></i>
+                                Get In Touch
+                            </a>
+                        </button>
+                        <button
+                            class="group bg-white text-gray-800 px-6 sm:px-8 py-4 rounded-2xl font-bold text-lg neo-shadow hover:shadow-2xl transition-all duration-300 hover:scale-105 border-2 border-transparent hover:border-purple-200">
+                            <a href="#projects" class="flex items-center justify-center">
+                                <i class="fas fa-rocket mr-3 group-hover:animate-bounce"></i>
+                                View Projects
+                            </a>
+                        </button>
+                        <button
+                            class="group bg-white text-gray-800 px-6 sm:px-8 py-4 rounded-2xl font-bold text-lg neo-shadow hover:shadow-2xl transition-all duration-300 hover:scale-105 border-2 border-transparent hover:border-purple-200">
+                            <a href="./resume/my_resume.pdf" download="Soumyadwip_Das_Resume.pdf"
+                                class="flex items-center justify-center">
+                                <i class="fas fa-download mr-3 group-hover:animate-bounce"></i>
+                                Download Resume
+                            </a>
+                        </button>
+                    </div>
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-8 sm:gap-12">
+                        <div class="text-center">
+                            <div class="text-2xl font-black text-gray-800">3+</div>
+                            <div class="text-sm text-gray-600 font-medium">Years Experience</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-black text-gray-800">10+</div>
+                            <div class="text-sm text-gray-600 font-medium">Skills</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-black text-gray-800">4</div>
+                            <div class="text-sm text-gray-600 font-medium">Projects</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left" data-aos-duration="1000"
+                    class="flex justify-center lg:justify-end mt-12 lg:mt-0">
+                    <div class="relative w-full max-w-[300px] sm:max-w-[400px]">
+                        <div class="absolute inset-0 gradient-purple rounded-3xl transform rotate-6 opacity-20"></div>
+                        <div class="relative bg-white p-4 sm:p-8 rounded-3xl neo-shadow floating-animation">
+                            <div class="w-full aspect-square rounded-full overflow-hidden border-4 border-purple-100">
+                                <!-- REPLACE THIS SRC WITH YOUR ACTUAL PHOTO PATH -->
+                                <img src="./image/IMG_3808.JPG" alt="Soumyadwip Das"
+                                    class="w-full h-full object-top rounded-full scale-125"
+                                    onerror="this.style.display='none'; this.parentElement.classList.add('gradient-purple', 'flex', 'items-center', 'justify-center'); this.parentElement.innerHTML='<span class=\'text-white text-4xl font-black\'>SD</span>'">
+                            </div>
+                            <div class="absolute -bottom-4 -right-4 bg-white p-3 sm:p-4 rounded-full neo-shadow">
+                                <i class="fas fa-code text-xl sm:text-2xl gradient-text"></i>
+                            </div>
+                            <div class="absolute -top-4 -left-4 bg-white p-3 sm:p-4 rounded-full neo-shadow">
+                                <i class="fas fa-graduation-cap text-xl sm:text-2xl gradient-text"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 section-bg">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-800 mb-4">About Me</h2>
+            </div>
+
+            <div class="bg-white p-6 sm:p-8 rounded-3xl border border-gray-100 shadow-sm w-full">
+
+                <!-- Title -->
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-8 flex items-center gap-3">
+                    💼 Experience
+                </h3>
+
+                <!-- Timeline Wrapper -->
+                <div class="relative">
+
+                    <!-- Vertical Line -->
+                    <div class="absolute left-3 top-0 h-full w-[2px] bg-gray-200"></div>
+
+                    <!-- Items -->
+                    <div class="space-y-10 pl-10">
+
+                        <!-- Experience 1 -->
+                        <div class="relative">
+                            <span
+                                class="absolute -left-7 top-1 w-4 h-4 bg-blue-500 rounded-full border-4 border-white"></span>
+
+                            <h4 class="font-semibold text-gray-800">
+                                💻 Full Stack Python Developer Intern
+                                <span class="text-gray-500 font-normal">| Web Bocket</span>
+                            </h4>
+                            <p class="text-sm text-gray-500 italic mb-3">
+                                November 2025 - Present
+                            </p>
+
+                            <ul class="text-gray-600 space-y-2 text-sm sm:text-base">
+                                <li>• Working on full stack Python development</li>
+                                <li>• Building responsive web applications</li>
+                                <li>• Hands-on experience with RESTful APIs</li>
+                            </ul>
+                        </div>
+
+                        <!-- Experience 2 -->
+                        <div class="relative">
+                            <span
+                                class="absolute -left-7 top-1 w-4 h-4 bg-pink-500 rounded-full border-4 border-white"></span>
+
+                            <h4 class="font-semibold text-gray-800">
+                                🏢 Summer Intern
+                                <span class="text-gray-500 font-normal">| Directorate of Information Technology,
+                                    Tripura</span>
+                            </h4>
+                            <p class="text-sm text-gray-500 italic mb-3">
+                                June 2024 - July 2024
+                            </p>
+
+                            <ul class="text-gray-600 space-y-2 text-sm sm:text-base">
+                                <li>• Developed responsive web pages using HTML and CSS</li>
+                                <li>• Gained practical experience in web design</li>
+                            </ul>
+                        </div>
+
+                        <!-- Experience 3 -->
+                        <div class="relative">
+                            <span
+                                class="absolute -left-7 top-1 w-4 h-4 bg-purple-500 rounded-full border-4 border-white"></span>
+
+                            <h4 class="font-semibold text-gray-800">
+                                ✈️ CNS Engineer Intern
+                                <span class="text-gray-500 font-normal">| Airports Authority of India</span>
+                            </h4>
+                            <p class="text-sm text-gray-500 italic mb-3">
+                                May 2023 - June 2023
+                            </p>
+
+                            <ul class="text-gray-600 space-y-2 text-sm sm:text-base">
+                                <li>• Gained exposure to real-world technical environments</li>
+                                <li>• Worked with VHF equipment and automation systems</li>
+                                <li>• Learned about aviation navigation systems</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-left" class="space-y-6">
+                <div class="grid grid-cols-2 gap-4 sm:gap-6">
+                    <div
+                        class="bg-white p-4 sm:p-6 rounded-2xl neo-shadow text-center hover-lift gradient-purple text-white">
+                        <i class="fas fa-laptop-code text-2xl sm:text-3xl mb-3"></i>
+                        <h4 class="font-bold text-base sm:text-lg">Coding</h4>
+                        <p class="text-xs opacity-90">Passionate Developer</p>
+                    </div>
+                    <div
+                        class="bg-white p-4 sm:p-6 rounded-2xl neo-shadow text-center hover-lift gradient-pink text-white">
+                        <i class="fas fa-microchip text-2xl sm:text-3xl mb-3"></i>
+                        <h4 class="font-bold text-base sm:text-lg">Technologies</h4>
+                        <p class="text-xs opacity-90">Continuous Learner & Explorer</p>
+                    </div>
+                    <div
+                        class="bg-white p-4 sm:p-6 rounded-2xl neo-shadow text-center hover-lift gradient-blue text-white">
+                        <i class="fas fa-gamepad text-2xl sm:text-3xl mb-3"></i>
+                        <h4 class="font-bold text-base sm:text-lg">Gaming</h4>
+                        <p class="text-xs opacity-90">Strategic Thinker</p>
+                    </div>
+                    <div
+                        class="bg-white p-4 sm:p-6 rounded-2xl neo-shadow text-center hover-lift gradient-green text-white">
+                        <i class="fas fa-dumbbell text-2xl sm:text-3xl mb-3"></i>
+                        <h4 class="font-bold text-base sm:text-lg">Fitness</h4>
+                        <p class="text-xs opacity-90">Fitness Enthusiast</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-3xl neo-shadow">
+                    <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-4 gradient-text">
+                        <i class="fas fa-heart mr-3"></i>Interests & Hobbies
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span
+                            class="px-4 py-2 gradient-purple text-white rounded-full text-xs sm:text-sm font-medium">🎮
+                            Gaming</span>
+                        <span class="px-4 py-2 gradient-pink text-white rounded-full text-xs sm:text-sm font-medium">💪
+                            Fitness</span>
+                        <span class="px-4 py-2 gradient-blue text-white rounded-full text-xs sm:text-sm font-medium">🎬
+                            Video Editing</span>
+                        <span class="px-4 py-2 gradient-green text-white rounded-full text-xs sm:text-sm font-medium">✈️
+                            Travelling</span>
+                        <span class="px-4 py-2 gradient-teal text-white rounded-full text-xs sm:text-sm font-medium">🎵
+                            Music Listening</span>
+                        <span class="px-4 py-2 gradient-coral text-white rounded-full text-xs sm:text-sm font-medium">🏸
+                            Badminton</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="education" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-800 mb-4">Education Journey</h2>
+                <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">Building a strong foundation through
+                    continuous
+                    learning and growth</p>
+            </div>
+
+            <div id="education-grid" class="space-y-8 lg:space-y-12 max-w-5xl mx-auto">
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 section-bg">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-800 mb-4">Skills & Expertise</h2>
+                <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">Diverse technical skills across
+                    programming,
+                    hardware, and emerging technologies</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Programming Languages -->
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-white p-6 sm:p-8 rounded-3xl neo-shadow h-full">
+                        <div class="gradient-purple text-white p-4 rounded-2xl mb-6 text-center">
+                            <i class="fas fa-laptop-code text-2xl sm:text-3xl mb-2"></i>
+                            <h3 class="text-lg sm:text-xl font-bold">Programming Languages</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="flex items-center gap-2 px-4 py-2 bg-purple-50 border border-purple-200 text-purple-700 rounded-xl text-sm font-semibold">
+                                <i class="fab fa-python"></i> Python
+                            </span>
+                            <span
+                                class="flex items-center gap-2 px-4 py-2 bg-purple-50 border border-purple-200 text-purple-700 rounded-xl text-sm font-semibold">
+                                <i class="fab fa-js-square"></i> JavaScript
+                            </span>
+                            <span
+                                class="flex items-center gap-2 px-4 py-2 bg-purple-50 border border-purple-200 text-purple-700 rounded-xl text-sm font-semibold">
+                                <i class="fab fa-java"></i> Basic Java
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frontend Development -->
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-white p-6 sm:p-8 rounded-3xl neo-shadow h-full">
+                        <div class="gradient-pink text-white p-4 rounded-2xl mb-6 text-center">
+                            <i class="fas fa-globe text-2xl sm:text-3xl mb-2"></i>
+                            <h3 class="text-lg sm:text-xl font-bold">Frontend Development</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="flex items-center gap-2 px-4 py-2 bg-pink-50 border border-pink-200 text-pink-700 rounded-xl text-sm font-semibold">
+                                <i class="fab fa-html5"></i> HTML
+                            </span>
+                            <span
+                                class="flex items-center gap-2 px-4 py-2 bg-pink-50 border border-pink-200 text-pink-700 rounded-xl text-sm font-semibold">
+                                <i class="fab fa-css3-alt"></i> CSS
+                            </span>
+                            <span
+                                class="flex items-center gap-2 px-4 py-2 bg-pink-50 border border-pink-200 text-pink-700 rounded-xl text-sm font-semibold">
+                                <i class="fab fa-bootstrap"></i> Bootstrap
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend Development -->
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-white p-6 sm:p-8 rounded-3xl neo-shadow h-full">
+                        <div class="gradient-blue text-white p-4 rounded-2xl mb-6 text-center">
+                            <i class="fas fa-server text-2xl sm:text-3xl mb-2"></i>
+                            <h3 class="text-lg sm:text-xl font-bold">Backend Development</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-200 text-blue-700 rounded-xl text-sm font-semibold">
+                                <i class="fas fa-server"></i> Django
+                            </span>
+
+                            <span
+                                class="flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-200 text-blue-700 rounded-xl text-sm font-semibold">
+                                <i class="fas fa-database"></i> MySQL
+                            </span>
+                            <span
+                                class="flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-200 text-blue-700 rounded-xl text-sm font-semibold">
+                                <i class="fab fa-python"></i> NumPy & Pandas
+                            </span>
+                            <span
+                                class="flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-200 text-blue-700 rounded-xl text-sm font-semibold">
+                                <i class="fab fa-python"></i> Matplotlib
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Technologies -->
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-white p-6 sm:p-8 rounded-3xl neo-shadow h-full">
+                        <div class="gradient-purple text-white p-4 rounded-2xl mb-6 text-center">
+                            <i class="fas fa-wrench text-2xl sm:text-3xl mb-2"></i>
+                            <h3 class="text-lg sm:text-xl font-bold">Tools & Technologies</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="flex items-center gap-2 px-4 py-2 bg-purple-50 border border-purple-200 text-purple-700 rounded-xl text-sm font-semibold">
+                                <i class="fab fa-git-alt"></i> Git
+                            </span>
+                            <span
+                                class="flex items-center gap-2 px-4 py-2 bg-purple-50 border border-purple-200 text-purple-700 rounded-xl text-sm font-semibold">
+                                <i class="fab fa-github"></i> GitHub
+                            </span>
+                            <span
+                                class="flex items-center gap-2 px-4 py-2 bg-purple-50 border border-purple-200 text-purple-700 rounded-xl text-sm font-semibold">
+                                <i class="fas fa-code"></i> VS Code
+                            </span>
+                            <span
+                                class="flex items-center gap-2 px-4 py-2 bg-purple-50 border border-purple-200 text-purple-700 rounded-xl text-sm font-semibold">
+                                <i class="fas fa-microchip"></i> Raspberry Pi
+                            </span>
+                            <span
+                                class="flex items-center gap-2 px-4 py-2 bg-purple-50 border border-purple-200 text-purple-700 rounded-xl text-sm font-semibold">
+                                <i class="fas fa-memory"></i> Arduino
+                            </span>
+                            <span
+                                class="flex items-center gap-2 px-4 py-2 bg-purple-50 border border-purple-200 text-purple-700 rounded-xl text-sm font-semibold">
+                                <i class="fas fa-microchip"></i> IoT
+                            </span>
+                            <span
+                                class="flex items-center gap-2 px-4 py-2 bg-purple-50 border border-purple-200 text-purple-700 rounded-xl text-sm font-semibold">
+                                <i class="fas fa-file-excel"></i> Microsoft Excel
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Design & Others -->
+                <div data-aos="fade-up" data-aos-delay="200" class="sm:col-span-2 lg:col-span-2">
+                    <div class="bg-white p-6 sm:p-8 rounded-3xl neo-shadow h-full">
+                        <div class="gradient-pink text-white p-4 rounded-2xl mb-6 text-center">
+                            <i class="fas fa-paint-brush text-2xl sm:text-3xl mb-2"></i>
+                            <h3 class="text-lg sm:text-xl font-bold">Design & Courses</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="flex items-center gap-2 px-4 py-2 bg-pink-50 border border-pink-200 text-pink-700 rounded-xl text-sm font-semibold">
+                                <i class="fab fa-figma"></i> Figma
+                            </span>
+                            <span
+                                class="flex items-center gap-2 px-4 py-2 bg-pink-50 border border-pink-200 text-pink-700 rounded-xl text-sm font-semibold">
+                                <i class="fas fa-paint-brush"></i> UI/UX Design
+                            </span>
+                            <span
+                                class="flex items-center gap-2 px-4 py-2 bg-pink-50 border border-pink-200 text-pink-700 rounded-xl text-sm font-semibold">
+                                <i class="fas fa-chart-line"></i> Big Data Analysis
+                            </span>
+                            <span
+                                class="flex items-center gap-2 px-4 py-2 bg-pink-50 border border-pink-200 text-pink-700 rounded-xl text-sm font-semibold">
+                                <i class="fas fa-shield-alt"></i> Cyber Security
+                            </span>
+                            <span
+                                class="flex items-center gap-2 px-4 py-2 bg-pink-50 border border-pink-200 text-pink-700 rounded-xl text-sm font-semibold">
+                                <i class="fas fa-microchip"></i> CMOS Digital VLSI
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-800 mb-4">Featured Projects</h2>
+                <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">Innovative solutions combining hardware
+                    and software to solve real-world problems</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-2 gap-8">
+
+                <!-- Netflix Clone -->
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-white p-6 sm:p-8 rounded-3xl neo-shadow h-full">
+                        <div class="gradient-purple text-white p-4 rounded-2xl mb-6">
+                            <div class="flex items-center gap-3">
+                                <span class="text-2xl">🎬</span>
+                                <h3 class="text-lg sm:text-xl font-bold">StreamX</h3>
+                            </div>
+                        </div>
+                        <ul class="space-y-3 flex-1">
+                            <li class="flex items-start gap-2 text-gray-500 text-sm sm:text-base">
+                                <span class="text-gray-300 mt-1">—</span>
+                                Responsive web application built with HTML and CSS
+                            </li>
+                            <li class="flex items-start gap-2 text-gray-500 text-sm sm:text-base">
+                                <span class="text-gray-300 mt-1">—</span>
+                                Focus on modern UI design and user experience
+                            </li>
+                            <li class="flex items-start gap-2 text-gray-500 text-sm sm:text-base">
+                                <span class="text-gray-300 mt-1">—</span>
+                                Pixel-perfect clone of Netflix interface
+                            </li>
+                        </ul>
+                        <div class="flex items-center justify-between mt-6 pt-4 border-t border-gray-100">
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-3 py-1 bg-purple-50 border border-purple-100 text-purple-700 rounded-full text-xs font-semibold">HTML</span>
+                                <span
+                                    class="px-3 py-1 bg-purple-50 border border-purple-100 text-purple-700 rounded-full text-xs font-semibold">CSS</span>
+                            </div>
+                            <a href="https://github.com/codezSoumyadwip/streaming-platform-ui" target="_blank"
+                                class="flex items-center gap-1.5 text-xs font-medium text-gray-500 hover:text-gray-800 px-3 py-1.5 border border-gray-200 rounded-lg bg-gray-50 hover:border-gray-400 transition-colors duration-150">
+                                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Indoor Air Quality Monitoring System -->
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-white p-6 sm:p-8 rounded-3xl neo-shadow h-full">
+                        <div class="gradient-blue text-white p-4 rounded-2xl mb-6">
+                            <div class="flex items-center gap-3">
+                                <span class="text-2xl">🌍</span>
+                                <h3 class="text-lg sm:text-xl font-bold">Indoor Air Quality Monitoring System Using
+                                    Raspberry Pi Pico W</h3>
+                            </div>
+                        </div>
+                        <ul class="space-y-3 flex-1">
+                            <li class="flex items-start gap-2 text-gray-500 text-sm sm:text-base">
+                                <span class="text-gray-300 mt-1">—</span>
+                                Real-time monitoring of PM2.5, temperature, humidity, and gas sensors
+                            </li>
+                            <li class="flex items-start gap-2 text-gray-500 text-sm sm:text-base">
+                                <span class="text-gray-300 mt-1">—</span>
+                                Wi-Fi enabled data logging and visualization
+                            </li>
+                            <li class="flex items-start gap-2 text-gray-500 text-sm sm:text-base">
+                                <span class="text-gray-300 mt-1">—</span>
+                                Helps detect unhealthy air conditions and promote healthier indoor spaces
+                            </li>
+                        </ul>
+                        <div class="flex items-center justify-between mt-6 pt-4 border-t border-gray-100">
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-3 py-1 bg-blue-50 border border-blue-100 text-blue-700 rounded-full text-xs font-semibold">Raspberry
+                                    Pi</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-50 border border-blue-100 text-blue-700 rounded-full text-xs font-semibold">Python</span>
+                                <span
+                                    class="px-3 py-1 bg-blue-50 border border-blue-100 text-blue-700 rounded-full text-xs font-semibold">IoT</span>
+                            </div>
+                            <a href="https://github.com/codezSoumyadwip/IAQ-Monitoring-System-Using-Raspberry-Pi-Pico-W"
+                                target="_blank"
+                                class="flex items-center gap-1.5 text-xs font-medium text-gray-500 hover:text-gray-800 px-3 py-1.5 border border-gray-200 rounded-lg bg-gray-50 hover:border-gray-400 transition-colors duration-150">
+                                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Smart Dustbin Using IoT -->
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-white p-6 sm:p-8 rounded-3xl neo-shadow h-full">
+                        <div class="gradient-pink text-white p-4 rounded-2xl mb-6">
+                            <div class="flex items-center gap-3">
+                                <span class="text-2xl">🗑️</span>
+                                <h3 class="text-lg sm:text-xl font-bold">Smart Dustbin Using IoT</h3>
+                            </div>
+                        </div>
+                        <ul class="space-y-3 flex-1">
+                            <li class="flex items-start gap-2 text-gray-500 text-sm sm:text-base">
+                                <span class="text-gray-300 mt-1">—</span>
+                                IoT-enabled waste management system with automated lid control
+                            </li>
+                            <li class="flex items-start gap-2 text-gray-500 text-sm sm:text-base">
+                                <span class="text-gray-300 mt-1">—</span>
+                                Fill-level detection with real-time alerts
+                            </li>
+                            <li class="flex items-start gap-2 text-gray-500 text-sm sm:text-base">
+                                <span class="text-gray-300 mt-1">—</span>
+                                Designed to improve hygiene through automation
+                            </li>
+                        </ul>
+                        <div class="flex items-center justify-between mt-6 pt-4 border-t border-gray-100">
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-3 py-1 bg-pink-50 border border-pink-100 text-pink-700 rounded-full text-xs font-semibold">Arduino</span>
+                                <span
+                                    class="px-3 py-1 bg-pink-50 border border-pink-100 text-pink-700 rounded-full text-xs font-semibold">IoT</span>
+                                <span
+                                    class="px-3 py-1 bg-pink-50 border border-pink-100 text-pink-700 rounded-full text-xs font-semibold">C++</span>
+                            </div>
+                            <a href="https://github.com/codezSoumyadwip/Smart-Dustbin-Using-IOT" target="_blank"
+                                class="flex items-center gap-1.5 text-xs font-medium text-gray-500 hover:text-gray-800 px-3 py-1.5 border border-gray-200 rounded-lg bg-gray-50 hover:border-gray-400 transition-colors duration-150">
+                                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Power Efficient Mini Inverter -->
+                <div data-aos="fade-up" data-aos-delay="400">
+                    <div class="bg-white p-6 sm:p-8 rounded-3xl neo-shadow h-full">
+                        <div class="gradient-purple text-white p-4 rounded-2xl mb-6">
+                            <div class="flex items-center gap-3">
+                                <span class="text-2xl">⚡</span>
+                                <h3 class="text-lg sm:text-xl font-bold">Power Efficient Mini Inverter</h3>
+                            </div>
+                        </div>
+                        <ul class="space-y-3 flex-1">
+                            <li class="flex items-start gap-2 text-gray-500 text-sm sm:text-base">
+                                <span class="text-gray-300 mt-1">—</span>
+                                Low-power DC-AC conversion device
+                            </li>
+                            <li class="flex items-start gap-2 text-gray-500 text-sm sm:text-base">
+                                <span class="text-gray-300 mt-1">—</span>
+                                Energy-efficient design for emergency backup solutions
+                            </li>
+                            <li class="flex items-start gap-2 text-gray-500 text-sm sm:text-base">
+                                <span class="text-gray-300 mt-1">—</span>
+                                Extends battery life during power outages
+                            </li>
+                        </ul>
+                        <div class="flex items-center justify-between mt-6 pt-4 border-t border-gray-100">
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-3 py-1 bg-purple-50 border border-purple-100 text-purple-700 rounded-full text-xs font-semibold">Electronics</span>
+                                <span
+                                    class="px-3 py-1 bg-purple-50 border border-purple-100 text-purple-700 rounded-full text-xs font-semibold">Circuit
+                                    Design</span>
+                                <span
+                                    class="px-3 py-1 bg-purple-50 border border-purple-100 text-purple-700 rounded-full text-xs font-semibold">VLSI</span>
+                            </div>
+                            <a href="https://github.com/codezSoumyadwip/Power-Efficient-Mini-Inverter" target="_blank"
+                                class="flex items-center gap-1.5 text-xs font-medium text-gray-500 hover:text-gray-800 px-3 py-1.5 border border-gray-200 rounded-lg bg-gray-50 hover:border-gray-400 transition-colors duration-150">
+                                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 section-bg">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-800 mb-4">Let's Connect</h2>
+                <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">Ready to collaborate on exciting projects
+                    or discuss
+                    innovative ideas</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
+
+                <!-- LEFT SIDE -->
+                <div data-aos="fade-right" class="space-y-8">
+
+                    <!-- Get in Touch -->
+                    <div class="bg-white p-6 sm:p-8 rounded-3xl neo-shadow">
+                        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-6 gradient-text">
+                            <i class="fas fa-envelope mr-3"></i>Get In Touch
+                        </h3>
+
+                        <div class="space-y-4">
+
+                            <!-- Email -->
+                            <div class="flex items-center space-x-4 p-4 bg-gray-50 rounded-2xl">
+                                <div class="gradient-purple text-white p-3 rounded-full shrink-0">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="overflow-hidden">
+                                    <p class="font-semibold text-gray-800">Email</p>
+                                    <p class="text-gray-600 text-sm sm:text-base break-words">
+                                        er.soumyadwip@gmail.com
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- LinkedIn -->
+                            <div class="flex items-center space-x-4 p-4 bg-gray-50 rounded-2xl">
+                            
+                                <div class="gradient-blue text-white p-3 rounded-full shrink-0">
+                                    <i class="fab fa-linkedin"></i>
+                                </div>
+                            
+                                <div class="overflow-hidden">
+                                    <p class="font-semibold text-gray-800">LinkedIn</p>
+                            
+                                    <a href="https://www.linkedin.com/in/soumyadwip-das" target="_blank" rel="noopener noreferrer"
+                                        class="text-gray-600 text-sm sm:text-base break-words hover:underline relative z-10">
+                            
+                                        linkedin.com/in/soumyadwip-das
+                            
+                                    </a>
+                                </div>
+                            
+                            </div>
+
+                            <!-- GitHub -->
+                            <div class="flex items-center space-x-4 p-4 bg-gray-50 rounded-2xl">
+                                <div class="bg-black text-white p-3 rounded-full shrink-0">
+                                    <i class="fa-brands fa-github text-lg"></i>
+                                </div>
+                                <div class="overflow-hidden">
+                                    <p class="font-semibold text-gray-800">GitHub</p>
+                                    <a href="https://github.com/codezSoumyadwip" target="_blank"
+                                        class="text-gray-600 text-sm sm:text-base break-words hover:underline">
+                                        github.com/codezSoumyadwip
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Location -->
+                            <div class="flex items-center space-x-4 p-4 bg-gray-50 rounded-2xl">
+                                <div class="gradient-orange text-white p-3 rounded-full shrink-0">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-800">Location</p>
+                                    <p class="text-gray-600 text-sm sm:text-base">
+                                        Agartala, Tripura, India
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- What I'm Looking For -->
+                    <div class="bg-white p-6 sm:p-8 rounded-3xl neo-shadow">
+                        <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-4">
+                            <i class="fas fa-lightbulb mr-3 gradient-text"></i>What I'm Looking For
+                        </h3>
+                        <ul class="space-y-2 text-gray-600 text-sm sm:text-base">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                Entry-level roles that support continuous learning and skill development
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                Opportunities to grow professionally while improving my technical skills
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                Real-world Projects
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- RIGHT SIDE (FORM) -->
+                <div data-aos="fade-left">
+                    <div class="bg-white p-6 sm:p-8 rounded-3xl neo-shadow">
+
+                        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-6 gradient-text">
+                            <i class="fas fa-paper-plane mr-3"></i>Send Message
+                        </h3>
+
+                        <form action="https://formspree.io/f/maqvabjr" method="POST" class="space-y-4 sm:space-y-6">
+
+                            <div class="grid sm:grid-cols-2 gap-4">
+
+                                <input type="text" name="name" placeholder="Your Name" required
+                                    class="w-full p-4 bg-gray-50 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-400">
+
+                                <input type="email" name="_replyto" placeholder="Your Email" required
+                                    class="w-full p-4 bg-gray-50 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-400">
+
+                            </div>
+
+                            <input type="text" name="subject" placeholder="Subject" required
+                                class="w-full p-4 bg-gray-50 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-400">
+
+                            <textarea name="message" rows="5" placeholder="Your Message" required
+                                class="w-full p-4 bg-gray-50 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-400"></textarea>
+
+                            <button type="submit"
+                                class="w-full gradient-purple text-white p-4 rounded-2xl font-bold hover:scale-105 transition duration-300">
+                                <i class="fas fa-rocket mr-3"></i>Send Message
+                            </button>
+
+                        </form>
+
+                    </div>
+                </div>
+
+                <footer class="bg-gray-900 text-white py-12">
+                    <div class="max-w-7xl mx-auto px-6 text-center">
+                        <div class="mb-6">
+                            <h3 class="text-xl sm:text-2xl font-bold gradient-text mb-2">Soumyadwip Das</h3>
+                            <p class="text-gray-400 text-sm">Electronics & Computer Science Engineer</p>
+                        </div>
+                        <div class="border-t border-gray-800 pt-6">
+                            <p class="text-gray-400 text-xs sm:text-sm">&copy; 2026 Soumyadwip Das. Crafted with passion
+                                and
+                                innovation.</p>
+                        </div>
+                    </div>
+                </footer>
+
+                <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+                <script>
+                    // Initialize AOS
+                    AOS.init({
+                        duration: 1000,
+                        once: true,
+                        offset: 100,
+                        easing: 'ease-out-cubic'
+                    });
+
+                    // Mobile menu toggle
+                    const mobileMenuBtn = document.getElementById('mobile-menu');
+                    const mobileNav = document.getElementById('mobile-nav');
+
+                    mobileMenuBtn.addEventListener('click', () => {
+                        mobileNav.classList.toggle('hidden');
+                    });
+
+                    // Education data
+                    const educationData = [
+                        {
+                            degree: "B.Tech in Electronics & Computer Science Engineering",
+                            institution: "Kalinga Institute of Industrial Technology (KIIT)",
+                            period: "2022-2025",
+                            status: "Completed",
+                            description: "Focused on Electronics & Computer Science Engineering and building practical technology solutions.",
+                            icon: "fas fa-graduation-cap",
+                            gradient: "gradient-purple"
+                        },
+                        {
+                            degree: "Diploma in Electrical Engineering",
+                            institution: "TTAADC Polytechnic Institute",
+                            period: "2019-2022",
+                            status: "Completed",
+                            description: "Built a strong foundation in core Electrical Engineering concepts.",
+                            icon: "fas fa-bolt",
+                            gradient: "gradient-pink"
+                        },
+                        {
+                            degree: "Secondary Education",
+                            institution: "Kendriya Vidyalaya No-1 Kunjaban, Agartala",
+                            period: "2018-2019",
+                            status: "Completed",
+                            description: "Built a strong academic foundation.",
+                            icon: "fas fa-school",
+                            gradient: "gradient-blue"
+                        }
+                    ];
+
+                    const programmingSkills = [
+                        { name: "Java", level: 65, icon: "fab fa-java" },
+                        { name: "Python", level: 70, icon: "fab fa-python" },
+                        { name: "HTML", level: 85, icon: "fab fa-html5" },
+                        { name: "CSS", level: 80, icon: "fab fa-css3-alt" },
+                        { name: "JavaScript", level: 70, icon: "fab fa-js-square" }
+                    ];
+
+                    const toolsSkills = [
+                        { name: "Raspberry Pi", level: 85, icon: "fas fa-microchip" },
+                        { name: "Arduino", level: 80, icon: "fas fa-memory" },
+                        { name: "IoT Systems", level: 75, icon: "fas fa-wifi" },
+                        { name: "Sensors", level: 85, icon: "fas fa-satellite-dish" },
+                        { name: "Control Systems", level: 70, icon: "fas fa-cogs" }
+                    ];
+
+                    const elearningSkills = [
+                        { name: "Cybersecurity", level: 70, icon: "fas fa-shield-alt" },
+                        { name: "Big Data Analysis", level: 65, icon: "fas fa-chart-line" },
+                        { name: "UI/UX Design", level: 75, icon: "fas fa-paint-brush" },
+                        { name: "CMOS VLSI", level: 60, icon: "fas fa-microchip" }
+                    ];
+
+                    const projectsData = [
+                        {
+                            title: "IAQ Monitoring System",
+                            description: "A compact indoor air quality monitoring system using Raspberry Pi Pico W and sensors to track pollutants in real-time.",
+                            technologies: ["Raspberry Pi Pico W", "IoT", "Sensors", "Real-time Monitoring"],
+                            icon: "fas fa-leaf",
+                            gradient: "gradient-green",
+                            features: ["Real-time Air Quality Tracking", "Compact Design", "IoT Integration", "Data Visualization"]
+                        },
+                        {
+                            title: "Smart Dustbin using IoT",
+                            description: "An IoT-enabled smart dustbin that automates waste disposal and sends notifications when full.",
+                            technologies: ["IoT", "Arduino", "Sensors", "Mobile App"],
+                            icon: "fas fa-recycle",
+                            gradient: "gradient-blue",
+                            features: ["Automated Notifications", "Smart Waste Management", "IoT Connectivity", "Mobile Integration"]
+                        },
+                        {
+                            title: "Power Efficient Mini Inverter",
+                            description: "A compact, energy-efficient mini inverter designed for low power consumption in households.",
+                            technologies: ["Power Systems", "Embedded Systems", "Circuit Design"],
+                            icon: "fas fa-bolt",
+                            gradient: "gradient-orange",
+                            features: ["Energy Efficient", "Compact Design", "Household Application", "Low Power Consumption"]
+                        }
+                    ];
+
+                    function generateEducation() {
+                        const educationGrid = document.getElementById('education-grid');
+                        educationData.forEach((edu, index) => {
+                            const educationCard = `
+                    <div data-aos="fade-up" data-aos-delay="${index * 100}" class="relative">
+                        <div class="bg-white p-6 sm:p-8 rounded-3xl neo-shadow hover-lift card-hover">
+                            <div class="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6">
+                                <div class="${edu.gradient} text-white p-4 rounded-2xl shrink-0">
+                                    <i class="${edu.icon} text-xl sm:text-2xl"></i>
+                                </div>
+                                <div class="flex-1 w-full">
+                                    <div class="flex flex-col sm:flex-row justify-between items-start mb-4">
+                                        <div class="w-full">
+                                            <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2">${edu.degree}</h3>
+                                            <p class="text-purple-600 font-semibold mb-1 text-sm sm:text-base">${edu.institution}</p>
+                                            <p class="text-gray-600 text-sm leading-relaxed">${edu.description}</p>
+                                        </div>
+                                        <div class="text-left sm:text-right mt-3 sm:mt-0 shrink-0">
+                                            <span class="inline-block px-3 py-1 ${edu.gradient} text-white rounded-full text-xs font-medium mb-2">
+                                                ${edu.status}
+                                            </span>
+                                            <p class="text-gray-500 font-medium text-xs sm:text-sm">${edu.period}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        ${index < educationData.length - 1 ? '<div class="edu-connector absolute left-8 sm:left-12 top-full w-0.5 h-8 bg-gradient-to-b from-purple-400 to-transparent"></div>' : ''}
+                    </div>
+                `;
+                            educationGrid.innerHTML += educationCard;
+                        });
+                    }
+
+                    function generateSkillCategory(containerId, skills) {
+                        const container = document.getElementById(containerId);
+                        skills.forEach(skill => {
+                            const skillItem = `
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center space-x-3">
+                                <i class="${skill.icon} text-purple-600 w-5 text-center"></i>
+                                <span class="font-semibold text-gray-800 text-sm sm:text-base">${skill.name}</span>
+                            </div>
+                            <span class="text-xs sm:text-sm font-bold text-gray-600">${skill.level}%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-1.5 sm:h-2">
+                            <div class="skill-bar h-full rounded-full transition-all duration-1000" style="width: ${skill.level}%"></div>
+                        </div>
+                    </div>
+                `;
+                            container.innerHTML += skillItem;
+                        });
+                    }
+
+                    function generateSkills() {
+                        generateSkillCategory('programming-list', programmingSkills);
+                        generateSkillCategory('tools-list', toolsSkills);
+                        generateSkillCategory('elearning-list', elearningSkills);
+                    }
+
+                    function generateProjects() {
+                        const projectsGrid = document.getElementById('projects-grid');
+                        projectsData.forEach((project, index) => {
+                            const projectCard = `
+                    <div data-aos="fade-up" data-aos-delay="${index * 100}">
+                        <div class="bg-white p-6 sm:p-8 rounded-3xl neo-shadow hover-lift card-hover h-full flex flex-col">
+                            <div class="${project.gradient} text-white p-4 rounded-2xl mb-6 text-center shrink-0">
+                                <i class="${project.icon} text-2xl sm:text-3xl mb-2"></i>
+                                <h3 class="text-lg sm:text-xl font-bold">${project.title}</h3>
+                            </div>
+                            
+                            <p class="text-gray-600 mb-6 leading-relaxed text-sm flex-grow">${project.description}</p>
+                            
+                            <div class="mb-6">
+                                <h4 class="font-bold text-gray-800 mb-3 text-sm sm:text-base">Key Features:</h4>
+                                <ul class="space-y-2">
+                                    ${project.features.map(feature => `
+                                        <li class="flex items-start text-xs sm:text-sm text-gray-600">
+                                            <i class="fas fa-check text-green-500 mr-2 mt-1 shrink-0"></i>
+                                            <span>${feature}</span>
+                                        </li>
+                                    `).join('')}
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <h4 class="font-bold text-gray-800 mb-3 text-sm sm:text-base">Technologies:</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    ${project.technologies.map(tech => `
+                                        <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-[10px] sm:text-xs font-medium">
+                                            ${tech}
+                                        </span>
+                                    `).join('')}
+                                </div>
+                            </div>
+                            
+                            <button class="w-full ${project.gradient} text-white py-3 rounded-2xl font-bold text-sm sm:text-base hover:shadow-lg transition-all duration-300 hover:scale-105 mt-auto">
+                                <i class="fas fa-external-link-alt mr-2"></i>View Details
+                            </button>
+                        </div>
+                    </div>
+                `;
+                            projectsGrid.innerHTML += projectCard;
+                        });
+                    }
+
+                    // Initialize content
+                    document.addEventListener('DOMContentLoaded', function () {
+                        generateEducation();
+                        generateSkills();
+                        generateProjects();
+
+                        const style = document.createElement('style');
+                        style.textContent = `
+                .animate-fade-in { animation: fadeIn 0.6s ease-in-out; }
+                @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+                .skill-bar { animation: fillBar 2s ease-in-out; }
+                @keyframes fillBar { from { width: 0%; } }
+            `;
+                        document.head.appendChild(style);
+                    });
+
+                    // Contact form handling
+                    document.getElementById('contact-form').addEventListener('submit', function (e) {
+                        e.preventDefault();
+                        const formData = new FormData(this);
+                        const name = formData.get('name');
+                        const email = formData.get('email');
+                        const subject = formData.get('subject');
+                        const message = formData.get('message');
+
+                        const emailSubject = encodeURIComponent(`Portfolio Contact: ${subject}`);
+                        const emailBody = encodeURIComponent(`Hello Soumyadwip,\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n\nBest regards,\n${name}`);
+                        const emailLink = `mailto:er.soumyadwip@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+
+                        window.location.href = emailLink;
+                        alert('Thank you for your message! Your email client will open with the pre-filled message.');
+                        this.reset();
+                    });
+
+                    // Navigation background change
+                    window.addEventListener('scroll', () => {
+                        const nav = document.querySelector('nav');
+                        if (window.scrollY > 100) {
+                            nav.style.background = 'rgba(255, 255, 255, 0.95)';
+                        } else {
+                            nav.style.background = 'rgba(255, 255, 255, 0.25)';
+                        }
+                    });
+
+                    // Close mobile menu on click
+                    document.querySelectorAll('#mobile-nav a').forEach(link => {
+                        link.addEventListener('click', () => {
+                            mobileNav.classList.add('hidden');
+                        });
+                    });
+                </script>
+</body>
+
+</html>
